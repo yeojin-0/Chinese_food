@@ -2,22 +2,11 @@
 
 ### app 생성 (중국집)
 ---
-`Food`(name 속성 하나 있음)model을 만들어서 form으로 값을 입력하기 실습
-Models.py Food 생성
-name 속성
-form을 구성해서 입력하기
+1. models.py 파일에서 [Food 모델-이름(name), 설명(description)]을 생성합니다. 그러나 description 속성은 기존에 없어서 충돌이 발생할 수 있습니다. 이를 해결하기 위해 description 속성에는 기본값을 지정하거나, SQLite 파일을 제거하고 재생성할 수 있습니다.
 
----
-Food(name 속성 하나 있음)라는 model을 만들어서 form으로 값을 입력하기 실습
+2. forms.py 파일에서 FoodForm을 생성하여 사용자로부터 음식의 이름과 설명을 입력받을 수 있는 폼을 만들어야 합니다. 이 폼에는 드롭다운 메뉴를 추가하여 음식의 카테고리를 선택할 수 있도록 해야 합니다.
 
-Models.py Food 생성
-name 속성
-description 속성
-기존에 description 옵션이 없어서 충돌 - defaut값을 넣거나, 아니면 sqlit3 파일 제거하고 재생성
-form을 구성해서 입력하기
-음식이름
-음식설명
-DB에 저장 확인
+3. HTML 템플릿 파일에서 이 폼을 렌더링하여 사용자에게 표시해야 합니다. 이를 통해 사용자는 웹 페이지를 통해 음식의 이름, 설명, 카테고리를 입력할 수 있습니다.
 
 ---
 Dropdown 폼을 이용해서 실습
